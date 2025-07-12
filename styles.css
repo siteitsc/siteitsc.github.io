@@ -1,0 +1,121 @@
+/* General Styles */
+body {
+    background-color: #121212;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+}
+
+/* Header */
+header {
+    background-color: #1f1f1f;
+    padding: 15px;
+    text-align: left;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.logo img {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+
+/* Title */
+.main-title {
+    margin: 40px 0;
+    font-size: 2.5em;
+}
+
+/* Scrollable Sections */
+.card-section {
+    text-align: left;
+    margin: 30px;
+}
+
+.card-section h2 {
+    margin-bottom: 15px;
+}
+
+/* Scrollable Wrapper */
+.scroll-wrapper {
+    overflow-x: scroll; /* Makes scrollbars visible */
+    white-space: nowrap;
+    padding-bottom: 10px;
+}
+
+/* Custom scrollbar for Webkit browsers */
+.scroll-wrapper::-webkit-scrollbar {
+    height: 8px;
+}
+
+.scroll-wrapper::-webkit-scrollbar-track {
+    background: #1f1f1f;
+}
+
+.scroll-wrapper::-webkit-scrollbar-thumb {
+    background: #444;
+    border-radius: 4px;
+}
+
+.scroll-wrapper::-webkit-scrollbar-thumb:hover {
+    background: #888;
+}
+
+/* Card Layout */
+.card-container {
+    display: flex;
+    gap: 20px;
+}
+
+.card {
+    background-color: #1f1f1f;
+    padding: 15px;
+    border-radius: 8px;
+    width: 200px;
+    min-height: 260px; /* Allows cards to expand if needed */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Entire card is clickable */
+.card a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* Ensure text wraps properly */
+.card h3 {
+    margin: 10px 0;
+    font-size: 1rem;
+    max-width: 180px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    text-align: center;
+    min-height: 40px; /* Ensures cards stay uniform */
+}
+
+.card a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Ensure images do not stretch */
+.card img {
+    width: 100%;
+    border-radius: 5px;
+}
