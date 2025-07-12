@@ -67,58 +67,55 @@ header {
     background: #888;
 }
 
-/* Card Layout */
+/* Card Container */
 .card-container {
     display: flex;
-    gap: 20px;
+    gap: 25px;
     flex-wrap: nowrap;
 }
 
+/* Individual Card */
 .card {
     background-color: #1f1f1f;
     padding: 15px;
     border-radius: 8px;
-    width: 280px; /* Wider for 16:9 aspect */
-    min-height: 260px;
+    width: 350px; /* Scaled 1.25x from original */
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start; /* Mount from top */
     text-align: center;
     transition: background-color 0.3s ease;
 }
 
+/* Clickable Card */
 .card a {
     text-decoration: none;
     color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     width: 100%;
     height: 100%;
 }
 
-.card a:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-/* Card Title Styling - wraps properly */
-.card h3 {
-    margin: 10px 0;
-    font-size: 1rem;
-    width: 100%;
-    white-space: normal;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    text-align: center;
-    min-height: 40px;
-}
-
-/* Card Image - 16:9 aspect ratio */
+/* Thumbnail Image - 16:9 Aspect Ratio */
 .card img {
     width: 100%;
     aspect-ratio: 16 / 9;
     object-fit: cover;
     border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Card Title - Responsive Wrapping */
+.card h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    width: 100%;
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    text-align: center;
 }
