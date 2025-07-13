@@ -1,4 +1,8 @@
 /* General Styles */
+html {
+    scroll-padding-top: 120px; /* Keeps anchor targets below fixed header */
+}
+
 body {
     background-color: #121212;
     color: #ffffff;
@@ -36,7 +40,7 @@ header {
 
 /* Main Content */
 main {
-    margin-top: 110px; /* Header height (80px) + vertical padding (15px × 2) */
+    margin-top: 110px; /* Header height (80px) + padding (15px × 2) */
 }
 
 /* Title */
@@ -91,7 +95,7 @@ main {
     background-color: #1f1f1f;
     padding: 15px;
     border-radius: 8px;
-    width: 350px;
+    width: 350px; /* Scaled up for 16:9 thumbnails */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -122,7 +126,7 @@ main {
     border-radius: 5px;
     margin-bottom: 10px;
     min-height: 150px;
-    background-color: #333;
+    background-color: #333; /* Fallback if image fails */
 }
 
 /* Card Title */
@@ -134,4 +138,9 @@ main {
     word-wrap: break-word;
     overflow-wrap: break-word;
     text-align: center;
+}
+
+/* Anchor Target Compensation */
+:target {
+    scroll-margin-top: 120px;
 }
