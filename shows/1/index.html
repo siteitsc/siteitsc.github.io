@@ -3,29 +3,27 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Show Detail</title>
-    <link rel="stylesheet" href="/styles.css" />    
+    <title>The Amazing World of Gumball - Video Stream</title>
+    <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
 
+    <!-- Header -->
     <header>
         <a href="/tv" class="logo">
-            <img src="/img/logo_dark.png" alt="Logo" />
+            <img src="/img/logo.png" alt="Logo" />
             <span>Video Stream</span>
         </a>
     </header>
 
     <main>
-        <!-- Hero Thumbnail -->
+        <!-- Hero Thumbnail Section -->
         <div class="hero">
-            <img src="/img/s/1.jpg" alt="Hero Thumbnail" />
+            <img src="/img/s/1/1-1.jpg" alt="Hero Thumbnail" />
             <div class="hero-overlay">
                 <h1>The Amazing World of Gumball</h1>
                 <div class="play-options">
-                    <button class="play-button">
-                        <!-- Text determined by JS/localStorage -->
-                        Continue Watching
-                    </button>
+                    <button class="play-button">Continue Watching</button>
                 </div>
             </div>
         </div>
@@ -40,47 +38,10 @@
             </select>
         </div>
 
-        <!-- Episode Cards -->
-        <div class="episode-list" id="episodes">
-            <!-- Example card -->
-            <div class="episode-card">
-                <img src="/img/e/1-1.jpg" alt="Episode Thumbnail" />
-                <h3>Episode 1: The DVD</h3>
-                <p>Gumball and Darwin are on a mission to return a rented DVD before the late fee stacks up.</p>
-            </div>
-            <div class="episode-card">
-                <img src="/img/e/1-2.jpg" alt="Episode Thumbnail" />
-                <h3>Episode 2: The Responsible</h3>
-                <p>The boys are left home alone for the first time and decide to turn the house upside down.</p>
-            </div>
-            <!-- Additional cards will be dynamically loaded or changed via JS based on dropdown -->
-        </div>
+        <!-- Scrollable Episode Cards -->
+        <div class="episode-list" id="episodes"></div>
     </main>
 
-    <script>
-        // Example: Dynamic season change and play button text via browser storage
-        const seasonSelect = document.getElementById('season');
-        const episodes = document.getElementById('episodes');
-        const playButton = document.querySelector('.play-button');
-
-        // Load stored watch state
-        const watchState = JSON.parse(localStorage.getItem('gumballWatchState')) || {
-            season: 1,
-            episode: 1,
-            status: 'Continue Watching'
-        };
-
-        // Set play button text
-        if (watchState.season && watchState.episode) {
-            playButton.textContent = `${watchState.status} • Season ${watchState.season}, Episode ${watchState.episode}`;
-        }
-
-        // Change episodes on dropdown change (mocked)
-        seasonSelect.addEventListener('change', (e) => {
-            const selected = e.target.value;
-            // Replace episode cards here dynamically based on season
-            // episodes.innerHTML = fetchEpisodes(selected);
-        });
-    </script>
+    <script src="/scripts.js" defer></script>
 </body>
 </html>
