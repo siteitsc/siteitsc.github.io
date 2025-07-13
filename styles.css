@@ -36,7 +36,7 @@ header {
 
 /* Main Content */
 main {
-    margin-top: 80px; /* Offsets fixed header without reducing visible space */
+    margin-top: 110px; /* Header height (80px) + vertical padding (15px × 2) */
 }
 
 /* Title */
@@ -91,7 +91,7 @@ main {
     background-color: #1f1f1f;
     padding: 15px;
     border-radius: 8px;
-    width: 350px; /* 1.25x wider for 16:9 thumbnails */
+    width: 350px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -122,7 +122,7 @@ main {
     border-radius: 5px;
     margin-bottom: 10px;
     min-height: 150px;
-    background-color: #333; /* Fallback background if image is missing */
+    background-color: #333;
 }
 
 /* Card Title */
