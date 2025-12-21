@@ -1,0 +1,11 @@
+{
+  "name": "vsbackend",
+  "version": "1.0.0",
+  "description": "Backend for https://siteitsc.github.io",
+  "main": "api/index.json.js",
+  "scripts": {
+    "start": "vercel dev",
+    "deploy": "vercel --prod"
+  },
+  "license": "MIT"
+}
