@@ -1,0 +1,25 @@
+{
+  "version": 2,
+  "routes": [
+    {
+      "src": "/s.json",
+      "dest": "/api/s.json"
+    }
+  ],
+  "functions": {
+    "api/s.json.js": {
+      "runtime": "nodejs18.x",
+      "memory": 128,
+      "maxDuration": 5
+    }
+  },
+  "headers": [
+    {
+      "source": "/s.json",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=60" },
+        { "key": "Content-Type", "value": "application/json" }
+      ]
+    }
+  ]
+}
